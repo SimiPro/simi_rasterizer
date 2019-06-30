@@ -1,8 +1,14 @@
 # IMGUI EXAMPLE
 
+## Output
+
+![example_img](example_img.png)
+
+
+
 ### BUILD
 
-git clone https://github.com/SimiPro/imgui_image_test --recursive-submodules
+git clone https://github.com/SimiPro/simi_rasterizer --recursive-submodules
 
 mkdir build
 
