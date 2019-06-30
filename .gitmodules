@@ -7,3 +7,9 @@
 [submodule "stb"]
 	path = stb
 	url = https://github.com/nothings/stb
+[submodule "eigen-git-mirror"]
+	path = eigen-git-mirror
+	url = https://github.com/eigenteam/eigen-git-mirror
+[submodule "libigl"]
+	path = libigl
+	url = https://github.com/libigl/libigl

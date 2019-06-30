@@ -33,6 +33,16 @@ set (IMGUI_SOURCES
 #message("${IMGUI_SOURCES}")
 
 add_executable(app main.cpp ${GL3W} ${IMGUI_SOURCES})
+add_executable(write_image write_image.cc ${IMGUI_SOURCES})
+
+include_directories(libigl/include)
+
+target_include_directories(write_image PUBLIC ${OPENGL_INCLUDE_DIR})
+target_include_directories(write_image PUBLIC imgui/examples/libs/gl3w)
+target_include_directories(write_image PUBLIC imgui)
+target_include_directories(write_image PUBLIC stb)
+target_include_directories(write_image PUBLIC eigen-git-mirror)
+
 
 target_include_directories(app PUBLIC ${OPENGL_INCLUDE_DIR})
 target_include_directories(app PUBLIC imgui/examples/libs/gl3w)
@@ -41,4 +51,7 @@ target_include_directories(app PUBLIC stb)
 
 
 target_link_libraries(app glfw ${OPENGL_gl_LIBRARY})
+
+target_link_libraries(write_image glfw ${OPENGL_gl_LIBRARY})
+
 
